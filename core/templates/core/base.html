@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Carpet cleaning Services in Auckland</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- bootstrap v4.0.0 -->
+		<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+		<!-- linear-icons css -->
+		<link rel="stylesheet" href="{% static 'core/css/linear-icons.css' %}">
+		<!-- elegant css -->
+		<link rel="stylesheet" href="{% static 'core/css/elegant.css' %}">
+		<!-- animate css -->
+		<link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
+		<!-- jquery.mmenu css -->
+		<link rel="stylesheet" href="{% static 'core/mmenu/dist/mmenu.css' %}" />
+		<!-- jquery-ui.min css -->
+		<link rel="stylesheet" href="{% static 'core/css/jquery-ui.min.css' %}">
+		<!-- slick css -->
+		<link rel="stylesheet" href="{% static 'core/css/slick.css' %}">
+		<!-- slick-theme css -->
+		<link rel="stylesheet" href="{% static 'core/css/slick-theme.css' %}">
+		<!-- venobox css -->
+		<link rel="stylesheet" href="{% static 'core/css/venobox.css' %}">
+		<!-- helper css -->
+		<link rel="stylesheet" href="{% static 'core/css/helper.css' %}">
+		<!-- style css -->
+		<link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+		<!-- responsive css -->
+		<link rel="stylesheet" href="{% static 'core/css/responsive.css' %}">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		
+	</head>
+
+<body>
+    
+
+	<!--header-starts-->
+<header>
+	<!--header-top-->
+	<div class="topbar" data-aos="fade-right">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="topbar-left-side">
+						<ul>
+							<li><i class="fas fa-phone-alt"></i> <a class="text-white" href="tel:0800867567">0800867567</a></li>
+                            <li><i class="fas fa-envelope"></i><a class="text-white">  Mon To Fri 9:00am To 6:00pm</a></li>
+							<li><i class="fas fa-envelope"></i><a class="text-white"  href="mailto:Info@cleanercouch.co.nz">Info@cleanercouch.co.nz </a> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--header-top-->
+
+
+	<div class="header-top-area"data-aos="fade-right">
+		<div class="container">
+			<div class="row height-100 align-items-center">
+				<div class="col-lg-5 col-sm-4">
+					<div class="logo">
+						<a href="{% url 'home' %}"><img src="{% static 'core/images/logo.png' %}" alt="" /></a>
+					</div>
+				</div>
+				
+				<div class="col-lg-7 col-sm-8">
+					<div class="row">
+						<div class="col-xl-9 col-lg-12">
+							<div class="row m-0">
+								<div class="col-lg-6 col-sm-6">
+									<div class="office-info open-hours">
+										<i class="lnr lnr-history"></i>
+										<ul class="list-none">
+											<li><span>Open Hours</span></li>
+											<li>8:00 - 17:00 Mon - Sat</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-6 col-sm-6">
+									<div class="office-info call-us">
+										<i class="lnr lnr-phone-handset"></i>
+										<ul class="list-none">
+											<li><span>Contact Us</span></li>
+											<li>(0131) 804 1808</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 book-btn">
+							<a href="{% url 'contact' %}" class="btn-common">BOOk ONLINE</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--header-bottom-->
+	<div class="header-bottom-area" id="sticker">
+		<div class="container">
+
+			<!--mobile-menu-->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+				<!--mobile logo-->
+				<div class="d-hidden mobile-logo">
+					<div class="logo">
+						<a href="{% url 'home' %}"><img src="{% static 'core/images/logo.png' %}" alt="" /></a>
+					</div>
+				</div>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto" data-aos="fade-left">
+					<li class="nav-item active">
+						<a class="mr-5 nav-link" href="{% url 'home' %}">HOME <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="mr-5 text-dark nav-link" href="{% url 'about' %}">ABOUT US</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class=" mr-5 text-dark nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						SERVICES
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							{% for service in services %}
+								<a class="dropdown-item" href="{% url 'service-details' service.title_to_url%}">{{service.Service_Title}}</a>
+						{% endfor %}
+						</div>
+					</li>
+
+					<li class="nav-item">
+						<a class="text-dark nav-link" href="{% url 'contact' %}">CONTACT</a>
+					</li>
+					
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>
+<!--header-ends-->
+
+
+    {% block content %}{% endblock content %}
+
+			<!--cta-area start-->
+			<div class="cta-area bg-3669b4"data-aos="fade-right">
+				<div class="container">
+					<div class="row height-250 align-items-center">
+						<div class="col-lg-10">
+							<div class="cta-text">
+								<h2 class="text-white" >Best Cleaning Service in Auckland</h2>
+								<h3 class="text-white"> Ready to free up your time and let us do the dirty work!</h3>
+							</div>
+						</div>
+						<div class="col-lg-2">
+							<div class="cta-btn">
+								<a href="{% url 'contact' %}" class="btn-common bg-dark">BOOK ONLINE</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--cta-area end-->
+
+<!--footer-area start-->
+		<footer>
+			<div class="footer-top-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-sm-6"data-aos="zoom-in-up">
+							<div class="footer-widget office-adress">
+								<h4>ABOUT US</h4>
+								<p>We offer a complete package for all our clients.</p>
+								<ul class="list-none">
+									<li>
+										<i class="lnr lnr-map-marker"></i>
+										 New Lynn Auckland, New Zealand
+									</li>
+									<li>
+										<i class="lnr lnr-phone-handset"></i>
+										0800867567
+									</li>
+									<li>
+										<i class="lnr lnr-envelope"></i>
+										info@speedyweb.co.nz
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6"data-aos="zoom-in-up">
+							<div class="footer-widget">
+								<h4>OUR SERVICES</h4>
+								<ul class="list-none">
+									<li><a href="service-details.html">Carpet Cleaning</a></li>
+									<li><a href="service-details.html">End of Tenency cleaning</a></li>
+									<li><a href="service-details.html">Outdoor Furniture Cleaning</a></li>
+									<li><a href="service-details.html">Curtain Cleaning</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6"data-aos="zoom-in-up">
+							<div class="footer-widget latest-posts">
+								<h4>LATEST POSTS</h4>
+								<ul class="list-none">
+									<li>
+										<a href="#">Which Cleaning Service Is Best For You?</a>
+										
+									</li>
+									<li>
+										<a href="#">How To Clean Grout and Remove Stains</a>
+									
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6"data-aos="zoom-in-up">
+							<div class="footer-widget subscribe-form">
+								<h4>NEWSLETTER</h4>
+								<p>Subscribe & get 10% discount when you purchase clean equipments for the first time</p>
+								<input type="text" placeholder="Your Email*" />
+								<button class="btn-common">SUBSCRIBE NOW</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!--footer-bottom-->
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-3 ds-sm-none">
+							<div class="logo">
+								<img src="{% static 'core/images/footer/logo.png' %}" alt="" />
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="copyright-text text-center">
+								<p>&copy; copyright Topjob 2023 Developed by <a href="http://speedyweb.co.nz/"> Speedyweb Technologies.</a></p>
+							</div>
+						</div>
+						<div class="col-lg-0">
+							<div class="copyright-text text-center">
+								<P><a href="{% url 'term-conditions' %}">Terms & Conditions</a></P>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--footer-area end-->
+		
+		<!--Whats App-->
+		<a class="whatsapp" href="https://wa.me/+917839287303?text=I%27m%20Interested%20in%20Your%20Digital%20Marketing%20Servises">
+			<img src="{% static 'core/images/whatsappicon.png'%}" width="50px" alt="whatsapp logo">
+		</a>
+		<!--Whats App-->
+		
+
+		<!-- modernizr js -->
+		<script src="{% static 'core/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+		<!-- jquery-3.4.1 version -->
+		<script src="{% static 'core/js/vendor/jquery-3.4.1.min.js' %}"></script>
+		<!-- jquery-migrate-3.1.0.min.js version -->
+		<script src="{% static 'core/js/vendor/jquery-migrate-3.1.0.min.js' %}"></script>
+		<!-- bootstra.min js -->
+		<script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+		<!-- mmenu js -->
+		<script src="{% static 'core/mmenu/dist/mmenu.js' %}"></script>
+		<script src="{% static 'core/mmenu/src/mmenu.debugger.js' %}"></script>
+		<!-- jquery-ui.min js -->
+		<script src="{% static 'core/js/jquery-ui.min.js' %}"></script>
+		<!---slick-js-->
+		<script src="{% static 'core/js/slick.min.js' %}"></script>
+		<!---counterup-js-->
+		<script src="{% static 'core/js/jquery.counterup.min.js' %}"></script>
+		<!---waypoints-js-->
+		<script src="{% static 'core/js/waypoints.js' %}"></script>
+		<!---isotop-js-->
+		<script src="{% static 'core/js/isotope.pkgd.min.js' %}"></script>
+		<!-- jquery.countdown js -->
+		<script src="{% static 'core/js/jquery.countdown.min.js' %}"></script>
+		<!---venobox-js-->
+		<script src="{% static 'core/js/venobox.min.js' %}"></script>
+		<!-- plugins js -->
+		<script src="{% static 'core/js/plugins.js' %}"></script>
+		<!-- main js -->
+		<script src="{% static 'core/js/main.js' %}"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>AOS.init({duration: 1100,})</script>
+	
+</body>
+</html>

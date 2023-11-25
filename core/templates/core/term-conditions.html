@@ -1,0 +1,88 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+		<!--page-banner-start-->
+		<div class="page-banner-area bg-1">
+			<div class="container">
+				<div class="row height-400 align-items-center">
+					<div class="col-lg-12">
+						<div class="page-banner text-center">
+							<h2>Terms & Conditions</h2>
+							<div class="site-breadcrumb">
+								<nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Terms & Conditions</li>
+								  </ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--page-banner-end-->
+		
+		<!--services-area start-->
+		<div class="services-area bg-f3f4f7 pt-108 pt-sm-65 pb-90 pb-sm-50">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						
+						<h4>08004shine Terms and Conditions</h4>
+						<h5>Cancellations/Reschedules/Lock Outs:</h5><P>We assess a 50% fee for cancellations/reschedules/lockouts when given less than one business day's notice. If the power or water is not available on the property, we will cancel the job and charge a 50% fee for cancellation. For flood restoration jobs, a cancellation fee of $250+GST will apply</P>
+						<h5>Arrival Time:</h5><p>Our services occur between 7:00 AM- 5:00 PM Monday – Friday and Saturday from 9:00 AM - 12:00 PM. For Flood call outs We do urgent jobs and available after hours. Given that each home that we clean varies in the amount of time it takes to clean, we cannot guarantee an exact arrival/departure time. If you have ordered online you will have selected a time slot. Our technician will arrive sometime within this time slot. </p>
+						<h5>Arrival Day: </h5><p>Cleaner Couch makes every effort to consistently schedule a predetermined set day that we arrive at each cleaning. If for any reason we need to reschedule due to staff illness or other unforeseen circumstances, we will give you as much notice as possible.</p>
+						<h5>Access to your home:</h5><p>Cleaner Couch will discuss arrangements of how to access your home before the cleaning. You can leave our team a house key for access, please just inform the admin of the key location and if any codes are required. Please let us know of any alarm codes if required. You can be assured that all of our Techs have had thorough criminal background checks through our company. Keys will be returned to the same spot.</p>
+						<h5>Pricing:</h5><p>Most of our prices are available online. If you are unsure, please contact us for a free quote. Our minimum charge for any visit is $165 including GST.</p>
+						<h5>Heavy-duty requirements:</h5><p>Our pricing online applies for general cleaning. If there are heavy-duty requirements such as mould removal, pet hair removal or a very high level of dirt in the home, then additional charges will apply. If your home is extra dirty or has any of the above, then please inform admin of this at the time of your booking, for a more accurate quote</p>
+						<h5>Payment:</h5><p>Online payment options are internet banking and credit card. Payment must be cleared in our account a day before the visit or paid by cash or EFTPOS to the cleaning team before starting the job. Failure to make payment may result in cancellation of services. If payment is not made prior to the job and we complete the job for you then the invoice shall be paid upon receipt. If we do not receive payment within 21 days, we will forward it to a collection service. In the unlikely event that your account is turned over to a collections service and/or court or other legal action is necessary to collect any unpaid balance, the client will be responsible for all filing fees, attorney’s fees, collection fees and other expenses incidental to obtaining full recovery of any unpaid balance. Interest will be charged @ 2% per month to any unpaid balance after 21 days.</p>
+						<h5>Parking: </h5><p>Parking is the customer’s responsibility, where parking is not available the costs incurred by parking will be paid by the customer.</p>
+					</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!--services-area end-->
+		
+		<!--contact-area start-->
+		<div class="contact-area bg-1 pt-100 pt-sm-80 pb-100 pb-sm-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6"></div>
+					<div class="col-lg-6">	
+						<div class="contact-form style-3">
+							<h2>Ask Us Anything</h2>
+
+							<form action = '' method='POST'>
+								{% csrf_token %}
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Name*" name="name">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" placeholder="Email*" name="email">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Subject:*" required name="subject">
+								</div>
+								<div class="form-group">
+									<input type="phone" class="form-control" placeholder="Phone*" name="phone">
+								</div>
+								<div class="form-group">
+									<textarea class="form-control" rows="3" placeholder="Message *" name="message"></textarea>
+								</div>
+								<div class="col-lg-12">
+									<button type="submit" class="btn-common btn-full">SEND MESSAGE</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--contact-area end-->
+{% endblock content %}
+		
+		

@@ -1,0 +1,262 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+	<!--slider-area start-->
+	<div class="main-slider">
+		<div class="slider-single height-800 hm1-first-slide bg-1">
+			<!--banner-text-->
+			<div class="d-table">
+				<div class="vertical-middle">
+					<div class="container z-index">
+						<div class="row align-items-center">
+							<div class="col-lg-5 col-sm-6">
+								<div class="slider-caption round">
+									<img class="img-border" src="{% static 'core\images\banner\caption\01_2.png' %}" alt="" />
+									<img class="inner-img" src="{% static 'core\images\banner\caption\01_1-1.png' %}" alt="" />
+									<div class="slider-caption-text">
+										<h5>Trusted <br/> Brand</h5>
+										<img class="img-stars" src="{% static 'core\images\banner\caption\01_home_v1.png' %}" alt="" />
+										<h2>30%
+											<small>OFF</small>
+											<span>DISCOUNT</span>
+										</h2>
+										<a href="{% url 'contact' %}" class="btn-common mt-20">BOOK ONLINE</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 offset-lg-1 col-sm-6"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-single height-800 second-slide bg-2">
+			<!--banner-text-->
+			<div class="d-table">
+				<div class="vertical-middle">
+					<div class="container z-index">
+						<div class="row align-items-center">
+							<div class="col-lg-7 col-sm-5"></div>
+							<div class="col-lg-5 col-sm-7">
+								<div class="slider-caption square">
+									<h5>Trusted <br/> <span>Brand</span></h5>
+									<h2>30% DISCOUNT</h2>
+									<h3>For First Cleaning Your Place</h3>
+									<a href="{% url 'contact' %}" class="btn-common">BOOK ONLINE</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--slider-area end-->
+	
+	<!--about-text home page start-->
+		<div class="m-5">
+			<div class="row mt-3 ">
+				<div class="col-lg-6">				
+		<div class="text-center">
+			<h3>Welcome to TopJob Cleaning Services Auckland</h3>
+			<img class="under-line" src="{% static 'core\images\bg\underlineimg.png' %}" alt="" />
+		</div>
+			</div>
+				<div class="col-lg-6">
+				<p>TopJob is one of the top rated cleaning Company in the city which offers a wide range of services that have earned us several laurels.Our difference is that we are professionally trained cleaners who take the time to do things right and have gained the reputation of providing a Merit quality clean for all our clients home, offices and small business. We can guarantee the highest standards across all aspects of commercial cleaning services for your commercial, industrial or office space.</p>
+				</div>
+			</div>
+		</div>
+
+		<!--about-text home page End-->
+		
+		<!--services-area start-->
+		<div class="services-area bg-f3f4f7 pt-108 pt-sm-68 pb-105 pb-sm-65">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12"data-aos="fade-right">
+						<div class="section-title text-center">
+							<h2>Our Main Services</h2>
+							<p>With an outstanding reputation for quality, integrity and service, <br/> we can clean anything you throw at us!</p>
+						</div>
+					</div>
+				</div>
+				<div class="row services-carousel mt-65 mt-sm-55" data-aos="fade-left">
+					{% for serv in services %}
+					<div class="col-lg-4">
+						<div class="service-single text-center">
+							<div class="service-thumb">
+								<img src="{{serv.First_Service_Image.url}}" alt="" />
+							</div>
+							
+							<div class="service-desc">
+								<h3>{{serv.Service_Title}}</h3>
+								<p>{{serv.Service_Subtitle}}</p>
+								<a href="{% url 'service-details' serv.title_to_url %}" class="btn-common">READ MORE</a>
+							</div>
+							
+						</div>
+						
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<!--services-area end-->
+		
+		<!--about-area start-->
+		<div class="about-area pt-105 pt-sm-65 pb-70 pb-sm-45" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title text-center" data-aos="fade-right">
+							<h2>Why choose TobJob</h2>
+							<p>We know you have a lot of choices when it comes to choosing who to clean <br/> your home, here are some reasons to consider CleanPro.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-60 mt-sm-50 align-items-center">
+					<div class="col-lg-4 col-sm-6">
+						<div class="service-single text-right"data-aos="flip-left">
+							<i class="lnr lnr-lock"></i>
+							<h4>Highly-trained Staff</h4>
+							<p>No one steps foot on your property until they have been background checked, drug screened, and work-history verified.</p>
+						</div>
+						<div class="service-single text-right"data-aos="flip-left">
+							<i class="lnr lnr-smile"></i>
+							<h4>100% customer satisfaction</h4>
+							<p>No one steps foot on your property until they have been background checked, drug screened, and work-history verified.</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 ds-sm-none"data-aos="flip-left">
+						<img src="{% static 'core/images/about/1.jpg' %}" alt="" />
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="service-single"data-aos="fade-left">
+							<i class="lnr lnr-bubble"></i>
+							<h4>Quick Response</h4>
+							<p>No one steps foot on your property until they have been background checked, drug screened, and work-history verified.</p>
+						</div>
+						<div class="service-single"data-aos="flip-left">
+							<i class="lnr lnr-tag"></i>
+							<h4>Cost Effective</h4>
+							<p>No one steps foot on your property until they have been background checked, drug screened, and work-history verified.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--about-area end-->
+		
+		<!--projects-area start-->
+		<div class="projects-area bg-f3f4f7 pt-105 pt-sm-65"data-aos="fade-right">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title text-center">
+							<h2>Selected Projects</h2>
+							<p>Here are a few of many projects we have completed for our customers. <br/> We provide a professional service</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="tab-content mt-50"data-aos="fade-left">
+					<!--single-tab-->
+					<div id="house" class="tab-pane active">
+						<div class="row projects-carousel">
+							{% for pro in project %}
+							<div class="col-lg-3 plr-0">
+								<div class="project-single">
+									<div class="project-thumb">
+										<img src="{{pro.image.url}}" alt="" />
+									</div>
+									<div class="project-caption">
+										<small>{{pro.Project_name}} </small>
+									
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--projects-area end-->
+		
+		
+		<!--testimonial-area start-->
+		<div class="testimonial-area pt-105 pt-sm-65 pb-100 pb-sm-60">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+
+						<div class="section-title text-center"data-aos="fade-left">
+							<h2>Testimonials & Partners</h2>
+							<p>We rigorously vet all of our Cleaners, please see a selection of quotes from our <br/> Channel Partners below.</p>
+						</div><br><br>
+
+						<div class="testimonial-items"data-aos="fade-right">
+							{% for mt in testom %}
+							<div class="testimonial-single style-1 text-center">
+								<div class="testimonial-thumb">
+									<img src="{{mt.image.url}}" alt="" />
+									<div class="quote-icon">
+										<img src="{% static 'core/images/testimonials/quote-icon.png' %}" alt="" />
+									</div>
+								</div>
+								<p>{{mt.clint_coments}}</p>
+								<h5>{{mt.name}}</h5>
+								<small>Physician</small>
+							</div>
+							{% endfor %}
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--testimonial-area end-->
+		
+		
+		
+		<!--contact-area start-->
+		<div class="contact-area bg-1 pt-100 pt-sm-80 pb-100 pb-sm-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6"></div>
+					<div class="col-lg-6">
+						<div class="contact-form style-3"data-aos="flip-left">
+							<h2>Ask Us Anything</h2>
+
+							<form action = '' method='POST'>
+								{% csrf_token %}
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Name*" name="name">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" placeholder="Email*" name="email">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Subject:*" required name="subject">
+								</div>
+								<div class="form-group">
+									<input type="phone" class="form-control" placeholder="Phone*" name="phone">
+								</div>
+								<div class="form-group">
+									<textarea class="form-control" rows="3" placeholder="Message *" name="message"></textarea>
+								</div>
+								<div class="col-lg-12">
+									<button type="submit" class="btn-common btn-full">SEND MESSAGE</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--contact-area end-->
+    {% endblock content %}

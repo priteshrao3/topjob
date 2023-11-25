@@ -1,0 +1,103 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+		<!--page-banner-start-->
+		<div class="page-banner-area bg-1">
+			<div class="container">
+				<div class="row height-400 align-items-center">
+					<div class="col-lg-12">
+						<div class="page-banner text-center">
+							<h2>Contact</h2>
+							<div class="site-breadcrumb">
+								<nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Contact</li>
+								  </ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--page-banner-end-->
+		
+		<!--contact-area start-->
+		<div class="contact-area bg-f3f4f7 pt-105 pt-sm-65 pb-120 pb-sm-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title text-center">
+							<h2>Keep In Touch With Us</h2>
+							<p>Below is the Contact Information for A Cleaning service. Call or email us to learn more about our house cleaning <br/> services in CleanPro and start enjoying a cleaner home today!</p>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-65 mt-sm-55">
+					<div class="col-lg-4">
+						<div class="contact-info">
+							<div class="single-contact-info">
+								<h5>Address</h5>
+								<p>Franse Stormboulevard 2 9677  JB Gasselternijveen</p>
+							</div>
+							<div class="single-contact-info">
+								<h5>Telephone Numbers</h5>
+								<p>(+88) 0111 223 445</p>
+							</div>
+							<div class="single-contact-info">
+								<h5>Email Address</h5>
+								<p>CleanProtheme@gmail.com</p>
+							</div>
+							<div class="single-contact-info">
+								<h5>Open Hours</h5>
+								<p>8:00 - 17:00 Mon - Sat</p>
+							</div>
+							<div class="social-icons style-3">
+								<a href="#"><i class="social_facebook"></i></a>
+								<a href="#"><i class="social_twitter"></i></a>
+								<a href="#"><i class="social_linkedin"></i></a>
+								<a href="#"><i class="social_pinterest"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="contact-form style-2 mt-sm-50">
+
+							<form id="contactForm" method="POST" action="">
+								{% csrf_token %}
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Name:*" required name="name">
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Email:*" required	name="email">
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Subject:*" required name="subject">
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="form-group">
+											<textarea class="form-control" name="message" placeholder="Message" required></textarea >
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<button type="submit" class="btn-common btn-full">SEND MESSAGE</button>
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--contact-area end-->
+{% endblock content %}
